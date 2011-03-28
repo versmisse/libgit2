@@ -53,16 +53,16 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Open a git repository.  <a href="#ga21ff20d0050abb046d7023fc99da1946"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__repository.html#gae5cad1b9756c745b1fad665d28a36afb">git_repository_open2</a> (<a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> **repository, const char *git_dir, const char *git_object_directory, const char *git_index_file, const char *git_work_tree)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Open a git repository by manually specifying all its paths.  <a href="#gae5cad1b9756c745b1fad665d28a36afb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__repository.html#ga0255cef238c65a943dc31385961fe410">git_repository_lookup</a> (<a class="el" href="types_8h.html#a855e48de855be1ccb0b752295caf374e">git_object</a> **object, <a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> *repo, const <a class="el" href="structgit__oid.html">git_oid</a> *id, <a class="el" href="types_8h.html#a5c9a2783d4fc110bc6a4f5355d20fedb">git_otype</a> type)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lookup a reference to one of the objects in the repostory.  <a href="#ga0255cef238c65a943dc31385961fe410"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__repository.html#ga8ad5110466b8a475180065171b205370">git_repository_open3</a> (<a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> **repository, const char *git_dir, <a class="el" href="types_8h.html#a787d49b60ab769b98c10bc4133b53f8a">git_odb</a> *object_database, const char *git_index_file, const char *git_work_tree)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Open a git repository by manually specifying its paths and the object database it will use.  <a href="#ga8ad5110466b8a475180065171b205370"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a787d49b60ab769b98c10bc4133b53f8a">git_odb</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__repository.html#ga23ffb8169f5509dcf78a26f35ce65197">git_repository_database</a> (<a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> *repo)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the object database behind a Git repository.  <a href="#ga23ffb8169f5509dcf78a26f35ce65197"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a1cfa84e6a0b318d1fb81f26eadb09e28">git_index</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__repository.html#ga36c7dbdeb583c9eae7c1330649f12631">git_repository_index</a> (<a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> *rpeo)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the Index file of a Git repository.  <a href="#ga36c7dbdeb583c9eae7c1330649f12631"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__repository.html#gae340c088caf60883593938759e03f590">git_repository_newobject</a> (<a class="el" href="types_8h.html#a855e48de855be1ccb0b752295caf374e">git_object</a> **object, <a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> *repo, <a class="el" href="types_8h.html#a5c9a2783d4fc110bc6a4f5355d20fedb">git_otype</a> type)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a new in-memory repository object with the given type.  <a href="#gae340c088caf60883593938759e03f590"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__repository.html#ga3ec158c98f0ba7557a958ff1a89d7bc5">git_repository_index</a> (<a class="el" href="types_8h.html#a1cfa84e6a0b318d1fb81f26eadb09e28">git_index</a> **index, <a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> *repo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the Index file of a Git repository.  <a href="#ga3ec158c98f0ba7557a958ff1a89d7bc5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__repository.html#gadc2e808b765a06f02d456644e561999a">git_repository_free</a> (<a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> *repo)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Free a previously allocated repository.  <a href="#gadc2e808b765a06f02d456644e561999a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__repository.html#ga7abb07c9ae2df7303fae75e33ae21359">git_repository_init</a> (<a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> **repo_out, const char *path, unsigned is_bare)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a new Git repository in the given folder.  <a href="#ga7abb07c9ae2df7303fae75e33ae21359"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="ga23ffb8169f5509dcf78a26f35ce65197"></a><!-- doxytag: member="repository.h::git_repository_database" ref="ga23ffb8169f5509dcf78a26f35ce65197" args="(git_repository *repo)" -->
@@ -109,6 +109,7 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Free a previously allocated repository. </p>
+<p>Note that after a repository is free'd, all the objects it has spawned will still exist until they are manually closed by the user with `git_object_close`, but accessing any of the attributes of an object without a backing repository will result in undefined behavior</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>repo</em>&nbsp;</td><td>repository handle to close. If NULL nothing occurs. </td></tr>
@@ -118,60 +119,65 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga36c7dbdeb583c9eae7c1330649f12631"></a><!-- doxytag: member="repository.h::git_repository_index" ref="ga36c7dbdeb583c9eae7c1330649f12631" args="(git_repository *rpeo)" -->
+<a class="anchor" id="ga3ec158c98f0ba7557a958ff1a89d7bc5"></a><!-- doxytag: member="repository.h::git_repository_index" ref="ga3ec158c98f0ba7557a958ff1a89d7bc5" args="(git_index **index, git_repository *repo)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a1cfa84e6a0b318d1fb81f26eadb09e28">git_index</a>* git_repository_index </td>
+          <td class="memname">int git_repository_index </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> *&nbsp;</td>
-          <td class="paramname"> <em>rpeo</em></td>
-          <td>&nbsp;)&nbsp;</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a1cfa84e6a0b318d1fb81f26eadb09e28">git_index</a> **&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> *&nbsp;</td>
+          <td class="paramname"> <em>repo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>Get the Index file of a Git repository. </p>
+<p>This is a cheap operation; the index is only opened on the first call, and subsequent calls only retrieve the previous pointer.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>Pointer where to store the index </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>repo</em>&nbsp;</td><td>a repository object </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>a pointer to the Index object; NULL if the index cannot be opened </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>0 on success; error code if the index could not be opened </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga0255cef238c65a943dc31385961fe410"></a><!-- doxytag: member="repository.h::git_repository_lookup" ref="ga0255cef238c65a943dc31385961fe410" args="(git_object **object, git_repository *repo, const git_oid *id, git_otype type)" -->
+<a class="anchor" id="ga7abb07c9ae2df7303fae75e33ae21359"></a><!-- doxytag: member="repository.h::git_repository_init" ref="ga7abb07c9ae2df7303fae75e33ae21359" args="(git_repository **repo_out, const char *path, unsigned is_bare)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int git_repository_lookup </td>
+          <td class="memname">int git_repository_init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a855e48de855be1ccb0b752295caf374e">git_object</a> **&nbsp;</td>
-          <td class="paramname"> <em>object</em>, </td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> **&nbsp;</td>
+          <td class="paramname"> <em>repo_out</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> *&nbsp;</td>
-          <td class="paramname"> <em>repo</em>, </td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>path</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structgit__oid.html">git_oid</a> *&nbsp;</td>
-          <td class="paramname"> <em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a5c9a2783d4fc110bc6a4f5355d20fedb">git_otype</a>&nbsp;</td>
-          <td class="paramname"> <em>type</em></td><td>&nbsp;</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>is_bare</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -182,65 +188,21 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Lookup a reference to one of the objects in the repostory. </p>
-<p>The generated reference is owned by the repository and should not be freed by the user.</p>
-<p>The 'type' parameter must match the type of the object in the odb; the method will fail otherwise. The special value 'GIT_OBJ_ANY' may be passed to let the method guess the object's type.</p>
+<p>Creates a new Git repository in the given folder. </p>
+<p>TODO:</p>
+<ul>
+<li>Reinit the repository</li>
+<li>Create config files</li>
+</ul>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>object</em>&nbsp;</td><td>pointer to the looked-up object </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>repo</em>&nbsp;</td><td>the repository to look up the object </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>the unique identifier for the object </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>the type of the object </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>repo_out</em>&nbsp;</td><td>pointer to the repo which will be created or reinitialized </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>the path to the repository </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>is_bare</em>&nbsp;</td><td>if true, a Git repository without a working directory is created at the pointed path. If false, provided path will be considered as the working directory into which the .git directory will be created.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the object </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gae340c088caf60883593938759e03f590"></a><!-- doxytag: member="repository.h::git_repository_newobject" ref="gae340c088caf60883593938759e03f590" args="(git_object **object, git_repository *repo, git_otype type)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int git_repository_newobject </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a855e48de855be1ccb0b752295caf374e">git_object</a> **&nbsp;</td>
-          <td class="paramname"> <em>object</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> *&nbsp;</td>
-          <td class="paramname"> <em>repo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a5c9a2783d4fc110bc6a4f5355d20fedb">git_otype</a>&nbsp;</td>
-          <td class="paramname"> <em>type</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Create a new in-memory repository object with the given type. </p>
-<p>The object's attributes can be filled in using the corresponding setter methods.</p>
-<p>The object will be written back to given git_repository when the <a class="el" href="group__git__object.html#ga69aab28b69c23e6e9ca5f0e8ccd0f74e" title="Write back an object to disk.">git_object_write()</a> function is called; objects cannot be written to disk until all their main attributes have been properly filled.</p>
-<p>Objects are instantiated with no SHA1 id; their id will be automatically generated when writing to the repository.</p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>object</em>&nbsp;</td><td>pointer to the new object  repo Repository where the object belongs </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Type of the object to be created </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>the new object </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>0 on success; error code otherwise </dd></dl>
 
 </div>
 </div>
@@ -281,7 +243,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>0 on sucess; error code otherwise </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>0 on success; error code otherwise </dd></dl>
 
 </div>
 </div>
@@ -339,7 +301,65 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>0 on sucess; error code otherwise </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>0 on success; error code otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8ad5110466b8a475180065171b205370"></a><!-- doxytag: member="repository.h::git_repository_open3" ref="ga8ad5110466b8a475180065171b205370" args="(git_repository **repository, const char *git_dir, git_odb *object_database, const char *git_index_file, const char *git_work_tree)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int git_repository_open3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a> **&nbsp;</td>
+          <td class="paramname"> <em>repository</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>git_dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a787d49b60ab769b98c10bc4133b53f8a">git_odb</a> *&nbsp;</td>
+          <td class="paramname"> <em>object_database</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>git_index_file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>git_work_tree</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Open a git repository by manually specifying its paths and the object database it will use. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>repository</em>&nbsp;</td><td>pointer to the repo which will be opened</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>git_dir</em>&nbsp;</td><td>The full path to the repository folder e.g. a '.git' folder for live repos, any folder for bare Equivalent to $GIT_DIR. Cannot be NULL.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>object_database</em>&nbsp;</td><td>A pointer to a git_odb created &amp; initialized by the user (e.g. with custom backends). This object database will be owned by the repository and will be automatically free'd. It should not be manually free'd by the user, or this git_repository object will become invalid.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>git_index_file</em>&nbsp;</td><td>The full path to the index (dircache) file Equivalent to $GIT_INDEX_FILE. If NULL, "$GIT_DIR/index" is assumed.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>git_work_tree</em>&nbsp;</td><td>The full path to the working tree of the repository, if the repository is not bare. Equivalent to $GIT_WORK_TREE. If NULL, the repository is assumed to be bare.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>0 on success; error code otherwise </dd></dl>
 
 </div>
 </div>
@@ -358,7 +378,7 @@ Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Dec 8 2010 10:11:34 for libgit2 by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Mar 28 2011 11:20:23 for libgit2 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

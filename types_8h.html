@@ -46,16 +46,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a>  </div>
   <div class="headertitle">
 <h1>types.h File Reference</h1>  </div>
 </div>
 <div class="contents">
 
-<p>libgit2 base types  
+<p>libgit2 base &amp; compatibility types  
 <a href="#_details">More...</a></p>
+<code>#include &lt;sys/types.h&gt;</code><br/>
 
 <p><a href="types_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgit__time.html">git_time</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Time in a signature.  <a href="structgit__time.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgit__signature.html">git_signature</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">An action signature (e.g.  <a href="structgit__signature.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><p><a class="anchor" id="amgrpd41d8cd98f00b204e9800998ecf8427e"></a> </p>
 <br/><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a5c9a2783d4fc110bc6a4f5355d20fedb">git_otype</a> { <br/>
@@ -75,11 +84,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  }</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><p>Basic type (loose or packed) of any Git object. </p>
  <a href="types_8h.html#a5c9a2783d4fc110bc6a4f5355d20fedb">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ae6d9729eb1feb0fdaa0ea953855c5173">git_rtype</a> { <br/>
+&nbsp;&nbsp;<b>GIT_REF_INVALID</b> =  0, 
+<a class="el" href="types_8h.html#ae6d9729eb1feb0fdaa0ea953855c5173a781010c2b9214f206c80e5f4fc4eaea2">GIT_REF_OID</a> =  1, 
+<a class="el" href="types_8h.html#ae6d9729eb1feb0fdaa0ea953855c5173a1c005f5a6ed94aaeeb3a47ed1753d4dd">GIT_REF_SYMBOLIC</a> =  2, 
+<a class="el" href="types_8h.html#ae6d9729eb1feb0fdaa0ea953855c5173a6f925caae8e9aa37f3ac149f3ec93121">GIT_REF_PACKED</a> =  4, 
+<br/>
+&nbsp;&nbsp;<b>GIT_REF_HAS_PEEL</b> =  8, 
+<b>GIT_REF_LISTALL</b> =  GIT_REF_OID|GIT_REF_SYMBOLIC|GIT_REF_PACKED
+<br/>
+ }</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><p>Basic type of any Git reference. </p>
+ <a href="types_8h.html#ae6d9729eb1feb0fdaa0ea953855c5173">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef int64_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#af56d90536d01a7d1d638906c1029701b">git_off_t</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cross-platform compatibility types for off_t / time_t.  <a href="#af56d90536d01a7d1d638906c1029701b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02ddb2c6b350338f889851e243386ef7"></a><!-- doxytag: member="types.h::git_time_t" ref="a02ddb2c6b350338f889851e243386ef7" args="" -->
+typedef int64_t&nbsp;</td><td class="memItemRight" valign="bottom"><b>git_time_t</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="types_8h.html#a787d49b60ab769b98c10bc4133b53f8a">git_odb</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a787d49b60ab769b98c10bc4133b53f8a">git_odb</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">An open object database handle.  <a href="#a787d49b60ab769b98c10bc4133b53f8a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01fd136cfcdafb6aaf9c856dd7f1c251"></a><!-- doxytag: member="types.h::git_odb_backend" ref="a01fd136cfcdafb6aaf9c856dd7f1c251" args="" -->
 typedef struct <a class="el" href="structgit__odb__backend.html">git_odb_backend</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a01fd136cfcdafb6aaf9c856dd7f1c251">git_odb_backend</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A custom backend in an ODB. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a308e55d5bfa8b50f4d9f3c4b820c58"></a><!-- doxytag: member="types.h::git_odb_object" ref="a9a308e55d5bfa8b50f4d9f3c4b820c58" args="" -->
+typedef struct <a class="el" href="types_8h.html#a9a308e55d5bfa8b50f4d9f3c4b820c58">git_odb_object</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a9a308e55d5bfa8b50f4d9f3c4b820c58">git_odb_object</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">An object read from the ODB. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af42fd708aaa4220df36dd221e123aa9a"></a><!-- doxytag: member="types.h::git_odb_stream" ref="af42fd708aaa4220df36dd221e123aa9a" args="" -->
+typedef struct <a class="el" href="structgit__odb__stream.html">git_odb_stream</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#af42fd708aaa4220df36dd221e123aa9a">git_odb_stream</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A stream to read/write from the ODB. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69f80526f06bad7d1aead7949c2840f5"></a><!-- doxytag: member="types.h::git_repository" ref="a69f80526f06bad7d1aead7949c2840f5" args="" -->
 typedef struct <a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840f5">git_repository</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Representation of an existing git repository, including all its object contents. <br/></td></tr>
@@ -87,7 +118,8 @@ typedef struct <a class="el" href="types_8h.html#a69f80526f06bad7d1aead7949c2840
 typedef struct <a class="el" href="types_8h.html#a855e48de855be1ccb0b752295caf374e">git_object</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a855e48de855be1ccb0b752295caf374e">git_object</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Representation of a generic object in a repository. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc160e727f44ae056097687ac9e74491"></a><!-- doxytag: member="types.h::git_revwalk" ref="adc160e727f44ae056097687ac9e74491" args="" -->
-typedef struct git_revwalk&nbsp;</td><td class="memItemRight" valign="bottom"><b>git_revwalk</b></td></tr>
+typedef struct <a class="el" href="types_8h.html#adc160e727f44ae056097687ac9e74491">git_revwalk</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#adc160e727f44ae056097687ac9e74491">git_revwalk</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Representation of an in-progress walk through the commits in a repo. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="types_8h.html#ac5c4eec78898ea6d3dfbc5a7a92d3915">git_tag</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ac5c4eec78898ea6d3dfbc5a7a92d3915">git_tag</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Parsed representation of a tag object.  <a href="#ac5c4eec78898ea6d3dfbc5a7a92d3915"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="types_8h.html#a05c8479cbe88cffd303398d82b52b3be">git_blob</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a05c8479cbe88cffd303398d82b52b3be">git_blob</a></td></tr>
@@ -100,9 +132,16 @@ typedef struct git_revwalk&nbsp;</td><td class="memItemRight" valign="bottom"><b
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Representation of a tree object.  <a href="#a754b8f9603ecc4f3dff649a924ce5b20"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="types_8h.html#a1cfa84e6a0b318d1fb81f26eadb09e28">git_index</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a1cfa84e6a0b318d1fb81f26eadb09e28">git_index</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Memory representation of an index file.  <a href="#a1cfa84e6a0b318d1fb81f26eadb09e28"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac41369c8e7e76cd9cc55e1fd69f2f72c"></a><!-- doxytag: member="types.h::git_time" ref="ac41369c8e7e76cd9cc55e1fd69f2f72c" args="" -->
+typedef struct <a class="el" href="structgit__time.html">git_time</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ac41369c8e7e76cd9cc55e1fd69f2f72c">git_time</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Time in a signature. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structgit__signature.html">git_signature</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ac8e111dc9ecaf399db803aa5b01e3421">git_signature</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">An action signature (e.g.  <a href="#ac8e111dc9ecaf399db803aa5b01e3421"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="types_8h.html#a356aa0f9b904c79a52cd4dfba4da14cd">git_reference</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a356aa0f9b904c79a52cd4dfba4da14cd">git_reference</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">In-memory representation of a reference.  <a href="#a356aa0f9b904c79a52cd4dfba4da14cd"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>libgit2 base types </p>
+<p>libgit2 base &amp; compatibility types </p>
 <hr/><h2>Typedef Documentation</h2>
 <a class="anchor" id="a05c8479cbe88cffd303398d82b52b3be"></a><!-- doxytag: member="types.h::git_blob" ref="a05c8479cbe88cffd303398d82b52b3be" args="" -->
 <div class="memitem">
@@ -161,6 +200,54 @@ typedef struct git_revwalk&nbsp;</td><td class="memItemRight" valign="bottom"><b
 <div class="memdoc">
 
 <p>An open object database handle. </p>
+
+</div>
+</div>
+<a class="anchor" id="af56d90536d01a7d1d638906c1029701b"></a><!-- doxytag: member="types.h::git_off_t" ref="af56d90536d01a7d1d638906c1029701b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int64_t <a class="el" href="types_8h.html#af56d90536d01a7d1d638906c1029701b">git_off_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Cross-platform compatibility types for off_t / time_t. </p>
+<p>NOTE: This needs to be in a public header so that both the library implementation and client applications both agree on the same types. Otherwise we get undefined behavior.</p>
+<p>Use the "best" types that each platform provides. Currently we truncate these intermediate representations for compatibility with the git ABI, but if and when it changes to support 64 bit types, our code will naturally adapt. NOTE: These types should match those that are returned by our internal stat() functions, for all platforms. </p>
+
+</div>
+</div>
+<a class="anchor" id="a356aa0f9b904c79a52cd4dfba4da14cd"></a><!-- doxytag: member="types.h::git_reference" ref="a356aa0f9b904c79a52cd4dfba4da14cd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="types_8h.html#a356aa0f9b904c79a52cd4dfba4da14cd">git_reference</a> <a class="el" href="types_8h.html#a356aa0f9b904c79a52cd4dfba4da14cd">git_reference</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>In-memory representation of a reference. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac8e111dc9ecaf399db803aa5b01e3421"></a><!-- doxytag: member="types.h::git_signature" ref="ac8e111dc9ecaf399db803aa5b01e3421" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgit__signature.html">git_signature</a>  <a class="el" href="structgit__signature.html">git_signature</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>An action signature (e.g. </p>
+<p>for committers, taggers, etc) </p>
 
 </div>
 </div>
@@ -259,6 +346,34 @@ typedef struct git_revwalk&nbsp;</td><td class="memItemRight" valign="bottom"><b
 
 </div>
 </div>
+<a class="anchor" id="ae6d9729eb1feb0fdaa0ea953855c5173"></a><!-- doxytag: member="types.h::git_rtype" ref="ae6d9729eb1feb0fdaa0ea953855c5173" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="types_8h.html#ae6d9729eb1feb0fdaa0ea953855c5173">git_rtype</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Basic type of any Git reference. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ae6d9729eb1feb0fdaa0ea953855c5173a781010c2b9214f206c80e5f4fc4eaea2"></a><!-- doxytag: member="GIT_REF_OID" ref="ae6d9729eb1feb0fdaa0ea953855c5173a781010c2b9214f206c80e5f4fc4eaea2" args="" -->GIT_REF_OID</em>&nbsp;</td><td>
+<p>Invalid reference. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ae6d9729eb1feb0fdaa0ea953855c5173a1c005f5a6ed94aaeeb3a47ed1753d4dd"></a><!-- doxytag: member="GIT_REF_SYMBOLIC" ref="ae6d9729eb1feb0fdaa0ea953855c5173a1c005f5a6ed94aaeeb3a47ed1753d4dd" args="" -->GIT_REF_SYMBOLIC</em>&nbsp;</td><td>
+<p>A reference which points at an object id. </p>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ae6d9729eb1feb0fdaa0ea953855c5173a6f925caae8e9aa37f3ac149f3ec93121"></a><!-- doxytag: member="GIT_REF_PACKED" ref="ae6d9729eb1feb0fdaa0ea953855c5173a6f925caae8e9aa37f3ac149f3ec93121" args="" -->GIT_REF_PACKED</em>&nbsp;</td><td>
+<p>A reference which points at another reference. </p>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
 </div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -274,7 +389,7 @@ typedef struct git_revwalk&nbsp;</td><td class="memItemRight" valign="bottom"><b
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Dec 8 2010 10:11:34 for libgit2 by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Mar 28 2011 11:20:23 for libgit2 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

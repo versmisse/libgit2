@@ -87,7 +87,7 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__index.html#gaf6813db98ffce4b2e5f371549d59b722">git_index_write</a> (<a class="el" href="types_8h.html#a1cfa84e6a0b318d1fb81f26eadb09e28">git_index</a> *index)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write an existing index object from memory back to disk using an atomic file lock.  <a href="#gaf6813db98ffce4b2e5f371549d59b722"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__index.html#ga42a89cf5af89944dfe1d1fd174300d91">git_index_find</a> (<a class="el" href="types_8h.html#a1cfa84e6a0b318d1fb81f26eadb09e28">git_index</a> *index, const char *path)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Find the first index of any entires which point to given path in the Git index.  <a href="#ga42a89cf5af89944dfe1d1fd174300d91"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Find the first index of any entries which point to given path in the Git index.  <a href="#ga42a89cf5af89944dfe1d1fd174300d91"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__index.html#ga78655af5f462f1990ffe8b3476c60117">git_index_add</a> (<a class="el" href="types_8h.html#a1cfa84e6a0b318d1fb81f26eadb09e28">git_index</a> *index, const char *path, int stage)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add or update an index entry from a file in disk.  <a href="#ga78655af5f462f1990ffe8b3476c60117"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__git__index.html#gad3bad65da8cf00462caccb20d1f016f8">git_index_remove</a> (<a class="el" href="types_8h.html#a1cfa84e6a0b318d1fb81f26eadb09e28">git_index</a> *index, int position)</td></tr>
@@ -239,7 +239,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Find the first index of any entires which point to given path in the Git index. </p>
+<p>Find the first index of any entries which point to given path in the Git index. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>an existing index object </td></tr>
@@ -419,8 +419,8 @@ Functions</h2></td></tr>
 <p>Open the Index inside the git repository pointed by 'repo'. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>the pointer for the new index </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>repo</em>&nbsp;</td><td>the git repo which owns the index </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>index_path</em>&nbsp;</td><td>the path to the index file in disk </td></tr>
   </table>
   </dd>
 </dl>
@@ -534,7 +534,7 @@ Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Wed Dec 8 2010 10:11:34 for libgit2 by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Mar 28 2011 11:20:23 for libgit2 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
